@@ -1,9 +1,8 @@
 {
-	"name": "@myscope/packagename",
-	"version": "0.2.0",
-	"private": true,
-	"description": "A TypeScript package template.",
-	"author": "Author McName <author@email.com>",
+	"name": "tiledscript",
+	"version": "0.1.0",
+	"description": "Tiled map editor interfaces and utilities for TypeScript.",
+	"author": "Geoff Blair",
 	"license": "ISC",
 	"type": "module",
 	"main": "dist/index.js",
