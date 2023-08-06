@@ -1,0 +1,29 @@
+{
+	"name": "@myscope/packagename",
+	"version": "0.2.0",
+	"private": true,
+	"description": "A TypeScript package template.",
+	"author": "Author McName <author@email.com>",
+	"license": "ISC",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"clean": "rm -rf dist",
+		"lint": "prettier -c .",
+		"format": "prettier -w ."
+	},
+	"prettier": {},
+	"devDependencies": {
+		"prettier": "^3.0.1",
+		"typescript": "^5.1.6"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"packageManager": "yarn@3.6.1"
+}
