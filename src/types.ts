@@ -1,19 +1,30 @@
 export interface Property {
 	name: string;
 	type: string;
-	propertytype: string;
-	value: any;
+	propertyType: string;
+	value: unknown;
 }
 
-export interface PropertyType {
+export interface CustomType {
 	id: number;
 	name: string;
 	type: string;
+}
+
+export interface CustomClass extends CustomType {
+	type: "class";
 	members: Property[];
 }
 
+export interface CustomEnum extends CustomType {
+	type: "enum";
+	storageType: string;
+	values: string[];
+	valuesAsFlags: boolean;
+}
+
 export interface Project {
-	propertyTypes: PropertyType[];
+	propertyTypes: CustomType[];
 }
 
 export interface Template {

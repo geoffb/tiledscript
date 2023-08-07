@@ -5,6 +5,13 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@types/node@npm:^18.0.0":
+  version: 18.17.3
+  resolution: "@types/node@npm:18.17.3"
+  checksum: 884fb68936b2b0ff90863fcf80610dd2f3d9fe1947897248b0138df05fe41ee6ce62941b37b565e3b3fd77601cd3977a64de858654c6ab9064413b171740d6ba
+  languageName: node
+  linkType: hard
+
 "prettier@npm:^3.0.1":
   version: 3.0.1
   resolution: "prettier@npm:3.0.1"
@@ -18,8 +25,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tiledscript@workspace:."
   dependencies:
+    "@types/node": ^18.0.0
     prettier: ^3.0.1
     typescript: ^5.1.6
+  bin:
+    tiled-gen-types: dist/cli/gen-types.js
   languageName: unknown
   linkType: soft
 
