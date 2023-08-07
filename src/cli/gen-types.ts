@@ -64,10 +64,10 @@ for (const propertyType of project.propertyTypes) {
 	content += "\n";
 	switch (propertyType.type) {
 		case "class":
-			content += parseInterface(propertyType as CustomClass);
+			content += parseInterface(propertyType);
 			break;
 		case "enum":
-			content += parseEnum(propertyType as CustomEnum);
+			content += parseEnum(propertyType);
 			break;
 	}
 }

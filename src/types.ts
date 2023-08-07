@@ -1,21 +1,28 @@
+/** All possible custom types */
+export type CustomTypes = CustomClass | CustomEnum;
+
 export interface Property {
 	name: string;
 	type: string;
+	propertytype: string;
 	propertyType: string;
-	value: unknown;
+	value: any;
 }
 
+/** A generic custom type */
 export interface CustomType {
 	id: number;
 	name: string;
 	type: string;
 }
 
+/** A custom class type */
 export interface CustomClass extends CustomType {
 	type: "class";
 	members: Property[];
 }
 
+/** A custom enum type */
 export interface CustomEnum extends CustomType {
 	type: "enum";
 	storageType: string;
@@ -23,8 +30,9 @@ export interface CustomEnum extends CustomType {
 	valuesAsFlags: boolean;
 }
 
+/** Tiled project */
 export interface Project {
-	propertyTypes: CustomType[];
+	propertyTypes: CustomTypes[];
 }
 
 export interface Template {
