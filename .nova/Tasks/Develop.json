@@ -2,7 +2,7 @@
   "actions" : {
     "run" : {
       "enabled" : true,
-      "script" : "#!\/bin\/sh\nyarn watch"
+      "script" : "#!\/bin\/sh\nyarn dev"
     }
   },
   "persistent" : true
