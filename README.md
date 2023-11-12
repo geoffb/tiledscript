@@ -4,6 +4,12 @@
 
 [Tiled map editor](https://www.mapeditor.org) interfaces and utilities for [TypeScript](https://www.typescriptlang.org).
 
+## Features
+
+- TypeScript interfaces, types, etc for the [Tiled JSON format](https://doc.mapeditor.org/en/stable/reference/json-map-format/)
+- Utility functions for interacting with Tiled data
+- Generate TypeScript declarations from Custom Types
+
 ## Generate Custom Types
 
 Generate [TypeScript type declarations](https://www.typescriptlang.org/docs/handbook/2/type-declarations.html) from [Tiled custom types](https://doc.mapeditor.org/en/stable/manual/custom-properties/#custom-types).
