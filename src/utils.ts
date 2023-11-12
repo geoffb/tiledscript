@@ -1,11 +1,8 @@
-import type { CustomProperty, Layer, LayerType } from "./types.js";
+import type { Property, Layer, LayerType } from "./types.js";
 
-/** Optional type + JSON regex */
-const ComplexValuePattern = /((.*):)?([\[{][^]*?[\]}])$/g;
-
-/** Parse custom properties into a record */
-export function parseCustomProperties(
-	properties: CustomProperty[],
+/** Parse properties into a record */
+export function parseProperties(
+	properties: Property[],
 ): Record<string, unknown> {
 	const props: Record<string, unknown> = {};
 	for (const prop of properties) {
@@ -26,15 +23,4 @@ export function getLayersByType<T extends Layer = Layer>(
 		}
 	}
 	return matches;
-}
-
-export function isComplexValue(value: string): boolean {
-	return value.match(ComplexValuePattern) !== null;
-}
-
-export function parseComplexValueType(value: string): string {
-	let type = "unknown";
-	const match = value.match(ComplexValuePattern);
-	console.log(match);
-	return type;
 }
