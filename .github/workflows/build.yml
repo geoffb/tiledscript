@@ -33,3 +33,6 @@ jobs:
 
       - name: 🏗️ Build
         run: yarn build
+
+      - name: 📝 Generate docs
+        run: yarn doc
