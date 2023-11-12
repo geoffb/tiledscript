@@ -1,5 +1,5 @@
 {
-	"name": "tiledscript",
+	"name": "@geoffblair/tiledscript",
 	"version": "0.1.0",
 	"description": "Tiled map editor interfaces and utilities for TypeScript.",
 	"author": "Geoff Blair",
