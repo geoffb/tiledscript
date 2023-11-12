@@ -2,7 +2,6 @@
 
 import { readFileSync, writeFileSync } from "fs";
 import type { CustomClass, CustomEnum, Project } from "../types.js";
-import { isComplexValue, parseComplexValueType } from "../utils.js";
 
 const projectFilename = process.argv[2];
 const outputFilename = process.argv[3];
@@ -21,15 +20,10 @@ const TypeLookup: Record<string, string> = {
 function parseInterface(type: CustomClass) {
 	let members = "";
 	for (const member of type.members) {
-		let type = "unknown";
-		if (member.type === "string" && isComplexValue(member.value)) {
-			type = parseComplexValueType(member.value);
-		} else {
-			type =
-				member.propertyType !== undefined
-					? member.propertyType
-					: TypeLookup[member.type];
-		}
+		const type =
+			member.propertyType !== undefined
+				? member.propertyType
+				: TypeLookup[member.type];
 		members += `\t${member.name}: ${type};\n`;
 	}
 	return `export interface ${type.name} {\n${members}}\n`;
