@@ -18,12 +18,14 @@
 		"dev": "tsc -w",
 		"clean": "rm -rf dist",
 		"lint": "prettier -c .",
-		"format": "prettier -w ."
+		"format": "prettier -w .",
+		"doc": "typedoc src/index.ts"
 	},
 	"prettier": {},
 	"devDependencies": {
 		"@types/node": "^18.0.0",
 		"prettier": "^3.0.1",
+		"typedoc": "^0.25.3",
 		"typescript": "^5.1.6"
 	},
 	"publishConfig": {
